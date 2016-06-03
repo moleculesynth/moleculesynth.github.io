@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+
+<head>
+<title>Molecule Synth</title>
+<link rel="stylesheet" type="text/css" href="/style.css"/>
+<script type="text/javascript" src="/js/analytics.js"></script>
+<script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="/js/jquery.lazyload.min.js" type="text/javascript"></script>
+
+<script>
+$(function(){
+  $("img.lazy").lazyload({
+    effect : "fadeIn"
+  });
+});
+</script>
+
+<script>
+$(function(){
+  var blackOverlays = $(".blackOverlay");
+  blackOverlays.mouseover(function(){
+      $(this).stop().fadeTo(100, 0.7);
+  });
+  blackOverlays.mouseout(function(){
+      $(this).stop().fadeTo(300, 0.0);
+  });
+});
+</script>
+
+<style>
+#homeCoverImg {background: url(../images/cover/600.jpg) no-repeat center center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+
+@media screen and (min-width: 800px) {
+    #homeCoverImg {background: url(../images/cover/1200.jpg) no-repeat center center;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+    }
+}
+@media screen and (min-width: 1800px) {
+    #homeCoverImg {background: url(../images/cover/2500.jpg) no-repeat center center;
+            background-size: cover;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+    }
+}
+</style>
+
+<script src="/js/jquery.waitforimages.js" type="text/javascript"></script>
+
+<script>
+    $(function(){
+        $("#homeCoverImg").hide();
+        $('#homeCoverImg').waitForImages(function() {
+            // All descendant images have loaded, now slide up.
+            $("#homeCoverImg").fadeIn();
+        });
+        var mainImg = $('#mainImageContainer');
+        var mainImgOverlay = $('.mainImgOverlay');
+        mainImg.mouseover(function(){
+          mainImgOverlay.stop().fadeTo(100, 0.7);
+        });
+        mainImg.mouseout(function(){
+          mainImgOverlay.stop().fadeTo(300, 0.0);
+        });
+    });
+</script>
+</head>
+
+<body>
+<div id="homeBacker"></div>
+<a id="mainImageContainer" href="https://vimeo.com/moleculesynth" target="_blank"><div id="homeCoverImg"></div><div class="mainImgOverlay blackOverlay">
+    <span>Molecule Synth</span><br/>
+   physical electronics synthesizer and experimenter's design set
+</div>
+</a>
+
+<div id="menu">
+<ul>
+<li class="leftTxt"><a href="https://www.kickstarter.com/projects/travisfeldman/molecule-synth/description">KICKSTARTER</a></li>
+<li class="centerTxt"><a href="https://github.com/moleculesynth/moleculeMIDI">CODE</a></li>
+<li class="rightTxt"><a href="http://www.moleculesynth.com/manual.pdf">USERMANUAL</a></li>
+</ul>
+</div>
+<div class="homeWrapper">
+<div id="contentWrapper" class="fullWidth coverImage">
+<ul>
+<li><img data-original="/images/1.jpg" class="fullWidth lazy"/></li>
+<li><img data-original="/images/2.jpg" class="fullWidth lazy"/></li>
+<li><img data-original="/images/3.gif" class="fullWidth lazy"/></li>
+<li><img data-original="/images/4.jpg" class="fullWidth lazy"/></li>
+<li><div id="iframe-wraper"><iframe width="853" height="480" src="https://www.youtube.com/embed/oG2i6-eCddQ" frameborder="0" allowfullscreen></iframe></div></li>
+<li><img data-original="/images/5.jpg" class="fullWidth lazy"/></li>
+<li><img data-original="/images/7.jpg" class="fullWidth lazy"/></li>
+<li><img data-original="/images/8.jpg" class="fullWidth lazy"/></li>
+<li><img data-original="/images/9.jpg" class="fullWidth lazy"/></li>
+</ul>
+
+</div>
+</div>
+</body>
+</html>
+
+
