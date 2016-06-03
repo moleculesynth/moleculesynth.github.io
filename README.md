@@ -1,1 +1,1 @@
-# moleculesynth.github.io
+# repo for moleculesynth.com
