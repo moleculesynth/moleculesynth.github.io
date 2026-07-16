@@ -626,6 +626,7 @@ ul {
 
 .tone-red { background: var(--red); }
 .tone-yellow { background: var(--yellow); }
+.tone-cyan { background: var(--cyan); }
 .tone-pink { background: var(--pink); }
 .tone-green { background: var(--green); }
 
@@ -692,8 +693,24 @@ ul {
 
 .legend-red { background: var(--red); }
 .legend-yellow { background: var(--yellow); }
+.legend-cyan { background: var(--cyan); }
 .legend-pink { background: var(--pink); }
 .legend-green { background: var(--green); }
+
+.element-note {
+  max-width: 62rem;
+  margin-top: 54px;
+  padding: 24px 0 0 24px;
+  border-top: 6px solid var(--cyan);
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  line-height: 1.7;
+}
+
+.element-note strong {
+  color: var(--white);
+}
 
 .archive-table {
   margin-top: 76px;
