@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 56" role="img" aria-labelledby="title">
+  <title id="title">Molecule Synth hexagon</title>
+  <path d="M16 2h32l14 26-14 26H16L2 28Z" fill="#11110f"/>
+  <path d="M22 13h20l9 15-9 15H22l-9-15Z" fill="none" stroke="#25e6df" stroke-width="5"/>
+  <circle cx="32" cy="28" r="5" fill="#ff16c7"/>
+</svg>
