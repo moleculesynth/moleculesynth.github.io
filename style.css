@@ -206,11 +206,17 @@ ul {
 
 .brand {
   display: inline-flex;
+  min-width: 0;
   gap: 12px;
   align-items: center;
-  font-size: 0.9rem;
+}
+
+.brand-name {
+  font-family: var(--mono);
+  font-size: 0.65rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
   text-transform: uppercase;
 }
 
@@ -341,10 +347,6 @@ ul {
   flex-direction: column;
   min-height: max(720px, 100svh);
   padding-block: calc(var(--header-height) + 58px) 104px;
-}
-
-.hero .eyebrow {
-  max-width: 44rem;
 }
 
 .hero h1 {
@@ -1282,10 +1284,6 @@ ul {
     backdrop-filter: none;
   }
 
-  .brand-name {
-    font-size: 0.78rem;
-  }
-
   .hero {
     min-height: max(680px, 100svh);
   }
@@ -1305,8 +1303,9 @@ ul {
     padding-block: calc(var(--header-height) + 44px) 56px;
   }
 
-  .hero .eyebrow {
-    max-width: 28ch;
+  .brand-name {
+    max-width: min(42ch, calc(100vw - 120px));
+    font-size: 0.59rem;
   }
 
   .hero h1 {
